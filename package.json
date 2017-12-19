@@ -1,0 +1,9 @@
+{
+  "name": "rails_web_templete",
+  "private": true,
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "gentelella": "^1.4.0",
+    "jquery": "^3.2.1"
+  }
+}
