@@ -1,4 +1,5 @@
 class Admin::AdminUsers::PasswordsController < Devise::PasswordsController
+
   layout 'admin_nologin'
 
   # GET /resource/password/new
@@ -31,4 +32,8 @@ class Admin::AdminUsers::PasswordsController < Devise::PasswordsController
   # def after_sending_reset_password_instructions_path_for(resource_name)
   #   super(resource_name)
   # end
+
+  def after_sign_in_path_for(resource)
+    stored_location_for(resource) || admin_admin_users_path
+  end
 end
